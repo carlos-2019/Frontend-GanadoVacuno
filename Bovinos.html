@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/fixedcolumns/3.3.0/css/fixedColumns.dataTables.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+
+    <!-- Material design Icons Google-->
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <style >
+      div.dataTables_wrapper {
+            width: 1050px;
+            margin: 0 auto;
+        }/*
+        .col{
+            position: absolute;
+            width: 8em;
+        }
+        */
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="container mt-3">
+      <h2>HEMBRAS BOVINAS</h2>
+
+      <button type="button" class="btn btn-info" data-toggle="modal" data-target="#create">
+      <i class="material-icons">library_add</i>
+    </button>   
+      <!-- Nav tabs -->
+
+      <!-- Tab panes -->
+      <div class="tab-content border mb-3">
+        <div id="home" class="container tab-pane active"><br>
+            <table id="tabla1" class="display nowrap " style="width:100%">
+                <thead class="thead-dark">
+                <tr>
+                    <th>CUIA</th>
+                    <th>Alias</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>Peso</th>
+                    <th>Talla</th>
+                    <th>Estado del animal</th>
+                    <th>Tipo</th>
+                    <th>Estado activo</th>
+                    <th>Genotipo</th>
+                    <th>Origen</th>
+                    <th>Fecha de modificación</th>
+                    <th>Observación</th>
+                    <th>Acciones</th>
+                </tr>
+                </thead>
+                    <tbody>
+                        <tr>
+                            <td>2002</td>
+                            <td>Juana</td>
+                            <td>27/09/2016</td>
+                            <td>400 kg</td>
+                            <td>1.4 metros</td>
+                            <td>Enfermo</td>
+                            <td>Leche</td>
+                            <td>Producción</td>
+                            <td>Hereford</td>
+                            <td>Comprado</td>
+                            <td>27/09/2020</td>
+                            <td>Ninguna</td>
+                            <td>
+                                <ul class="list-inline m-0">
+                                    <li class="list-inline-item">
+                                        <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <span class="material-icons">
+                                            edit
+                                            </span>
+                                    </button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <span class="material-icons">
+                                            delete
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2002</td>
+                            <td>Hola asd</td>
+                            <td>27/09/2016</td>
+                            <td>400 kg</td>
+                            <td>1.4 metros</td>
+                            <td>Enfermo</td>
+                            <td>Leche</td>
+                            <td>Producción</td>
+                            <td>Hereford</td>
+                            <td>Comprado</td>
+                            <td>27/09/2020</td>
+                            <td>Ninguna</td>
+                            <td>
+                                <ul class="list-inline m-0">
+                                    <li class="list-inline-item">
+                                        <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <span class="material-icons">
+                                            edit
+                                            </span>
+                                    </button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <span class="material-icons">
+                                            delete
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2002</td>
+                            <td>Maria II</td>
+                            <td>27/09/2016</td>
+                            <td>400 kg</td>
+                            <td>1.4 metros</td>
+                            <td>Enfermo</td>
+                            <td>Leche</td>
+                            <td>Producción</td>
+                            <td>Hereford</td>
+                            <td>Comprado</td>
+                            <td>27/09/2020</td>
+                            <td>Ninguna</td>
+                            <td>
+                                <ul class="list-inline m-0">
+                                    <li class="list-inline-item">
+                                        <button class="btn btn-success btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Edit">
+                                            <span class="material-icons">
+                                            edit
+                                            </span>
+                                    </button>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip" data-placement="top" title="Delete">
+                                            <span class="material-icons">
+                                            delete
+                                            </span>
+                                        </button>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+      </div>
+      <div class="modal fade" id="create" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registrar hembra bovina</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+            <div class="col">
+                <form class="form-align" >
+                    <div class="row">
+                        <div class="col-12 col-md-6">          
+                            <div class="form-group row">
+                                <div class="col-5">
+                                    <label class="col-form-label float-right">Numero</label>
+                                </div>
+                                <div class="col-7">
+                                    <div>
+                                        <input type="number"  name="numero" class="form-control">
+                                    </div>
+                                </div>                                                        
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-5">
+                                    <label class="col-form-label float-right">Fecha de nacimiento</label>
+                                </div>
+                                <div class="col-7">
+                                    <div>
+                                        <input type="number"  name="numero" class="form-control">
+                                    </div>
+                                </div>                                                                
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-5">
+                                    <label class="col-form-label float-right">Peso</label>
+                                </div>
+                                <div class="col-7">
+                                    <div>
+                                        <input type="number"  name="numero" class="form-control">
+                                    </div>
+                                </div>                                    
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-5">
+                                    <label class="col-form-label float-right">Talla</label>
+                                </div>
+                                <div class="col-7">
+                                    <div>
+                                        <input type="number"  name="numero" class="form-control">
+                                    </div>
+                                </div>                                                                
+                            </div>
+                            <div class="form-group row">
+
+                                    <div class="col-5">
+                                        <label class="col-form-label float-right">Tipo</label>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="form-check">
+                                          <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">Leche
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">Carne
+                                          </label>
+                                        </div>
+                                    </div>                                                                                                     
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            
+                            <div class="form-group row">
+                                <div class="col-5">
+                                        <label class="col-form-label float-right">Estado activo</label>
+                                    </div>
+                                    <div class="col-7">
+                                        <div class="form-check">
+                                          <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">Producción
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">Seca
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">Preñada
+                                          </label>
+                                        </div>
+                                        <div class="form-check">
+                                          <label class="form-check-label">
+                                            <input type="radio" class="form-check-input" name="optradio">N.A.
+                                          </label>
+                                        </div>
+                                    </div>                                                                    
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-5">
+                                    <label class="col-form-label float-right">Genotipo</label>
+                                </div>
+                                <div class="col-7">
+                                    <div>
+                                        <input type="number"  name="numero" class="form-control">
+                                    </div>
+                                </div>                                                                
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-5">
+                                    <label class="col-form-label float-right">Origen</label>
+                                </div>
+                                <div class="col-7">
+                                    <div>
+                                        <input type="number"  name="numero" class="form-control">
+                                    </div>
+                                </div>                                                                
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-5">
+                                    <label class="col-form-label float-right">Observación</label>
+                                </div>
+                                <div class="col-7">
+                                    <textarea class="form-control" aria-label="With textarea"></textarea>
+                                </div>                                                                
+                            </div>
+                                                  
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js"></script>
+  <script src="https://cdn.datatables.net/fixedcolumns/3.3.0/js/dataTables.fixedColumns.min.js"></script>
+
+
+  <script>
+
+
+    $(document).ready(function() {
+        $('#tabla1').DataTable( {
+            "scrollX": true,
+            //"scrollY":200,
+            "language": {
+                "url": "https://cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Spanish.json"
+            },
+            fixedColumns:   {
+               leftColumns: 2
+           }
+
+        });
+
+    } );
+  </script>
+</body>
+</html>
